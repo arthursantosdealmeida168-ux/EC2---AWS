@@ -134,14 +134,11 @@ Em Proteção contra encerramento, selecione Ativar.
  Quando uma instância do Amazon EC2 não for mais necessária, ela poderá ser terminada, ou seja, a instância será excluída e os recursos serão liberados. Uma instância encerrada não pode ser acessada novamente, e os dados nela não podem ser recuperados. Se quiser evitar que a instância seja encerrada acidentalmente, ative a proteção contra encerramento para a instância, o que impede que ela seja encerrada enquanto a configuração permanecer ativada.
 
  
-
 Role até a parte inferior da página e copie e cole o código mostrado abaixo na caixa Dados do usuário:
 
-#!/bin/bash
-dnf install -y httpd
-systemctl enable httpd
-systemctl start httpd
-echo '<html><h1>Hello From Your Web Server!</h1></html>' > /var/www/html/index.html
+<img width="773" height="137" alt="Captura de tela 2026-04-24 173930" src="https://github.com/user-attachments/assets/424babe5-fb16-4f32-97c8-86313ff05580" />
+
+
  Ao executar uma instância, você pode passar os dados do usuário a ela, que podem ser usados para realizar tarefas automatizadas de instalação e configuração após a inicialização da instância.
 
 A instância está executando o Amazon Linux 2023. O script de shell que você especificou será executado como o usuário raiz do SO convidado quando a instância for iniciada. O script:
@@ -214,7 +211,8 @@ O log do sistema exibe a saída do console da instância, que é uma ferramenta 
 
 Role até a saída e observe que o pacote HTTP foi instalado com base nos dados do usuário que você adicionou quando criou a instância.
 
-Saída do console
+<img width="754" height="324" alt="Captura de tela 2026-04-24 173936" src="https://github.com/user-attachments/assets/45521a7e-a01d-40e9-bc1e-e79b631d8579" />
+
 
 Selecione Cancelar.
 
@@ -224,7 +222,8 @@ Certifique-se de que Web Server ainda esteja selecionado. Depois, no menu Açõe
 
 Abaixo você verá como seria seu console da instância do Amazon EC2 se uma tela estivesse anexada a ele.
 
-Captura de tela
+
+<img width="646" height="438" alt="Captura de tela 2026-04-24 173942" src="https://github.com/user-attachments/assets/72682923-edcb-4e63-bc32-75d2d55dc5e7" />
 
  
 
